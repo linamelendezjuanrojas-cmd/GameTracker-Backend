@@ -25,7 +25,7 @@ app.use('/api/juegos', juegoRoutes);
 app.use('/api/reseñas', reseñasRoutes);
 
 app.get('/api/health', (req, res) => {
-  res.json({ estado: 'Servidor funcionando ✅' });
+  res.json({ estado: 'Servidor funcionando ' });
 });
 
 app.listen(PORT, () => {
