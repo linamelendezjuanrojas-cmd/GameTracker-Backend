@@ -28,6 +28,7 @@ app.get('/api/health', (req, res) => {
   res.json({ estado: 'Servidor funcionando ' });
 });
 
+
 app.listen(PORT, () => {
   console.log(` Servidor en puerto ${PORT}`);
 });
