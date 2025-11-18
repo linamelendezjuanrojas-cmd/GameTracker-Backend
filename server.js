@@ -24,10 +24,13 @@ mongoose.connect(MONGODB_URI)
 app.use('/api/juegos', juegoRoutes);
 app.use('/api/reseñas', reseñasRoutes);
 
+app.get('/', (req, res) => {
+  res.json({ mensaje: 'GameTracker Backend ' });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({ estado: 'Servidor funcionando ' });
 });
-
 
 app.listen(PORT, () => {
   console.log(` Servidor en puerto ${PORT}`);
